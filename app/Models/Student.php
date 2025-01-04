@@ -12,5 +12,7 @@ class Student extends Model
         'name', 'college'
     ];
     public $timestamps = false;
-
+    public function waitlist() {
+        return $this->hasMany(Waitlist::class);
+    }
 }
