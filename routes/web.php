@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LibraryStaffController;
+use App\Http\Controllers\StudentController;
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -17,5 +19,5 @@ Route::middleware([
     })->name('dashboard');
 
     Route::resource('librarystaffs', LibraryStaffController::class);
-
+    Route::resource('students', StudentController::class);
 });
